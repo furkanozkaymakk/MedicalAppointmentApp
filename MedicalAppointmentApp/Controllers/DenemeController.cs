@@ -6,6 +6,7 @@ namespace MedicalAppointmentApp.Controllers
     {
         public IActionResult Index()
         {
+            //deneme
             return View();
         }
     }
