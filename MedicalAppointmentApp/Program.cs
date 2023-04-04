@@ -1,3 +1,4 @@
+using DataAccessLayer.Context;
 using DataAccessLayer.Extensions;
 using ServiceLayer.Extensions;
 
@@ -13,6 +14,8 @@ builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddSession();
 builder.Services.LoadDataAccessLayerExtension(builder.Configuration); //AddScope
 builder.Services.LoadServiceLayerExtension(builder.Configuration); //AddScope
+
+builder.Services.AddDbContext<AddDbContext>();
 
 var app = builder.Build();
 
