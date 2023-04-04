@@ -4,7 +4,7 @@ using DataAccessLayer.Repositories.Concretes;
 
 namespace DataAccessLayer.UnitOfWorks
 {
-    internal class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly AddDbContext dbContext;
 
