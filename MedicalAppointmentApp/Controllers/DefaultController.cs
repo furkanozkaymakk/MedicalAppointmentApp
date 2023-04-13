@@ -3,17 +3,13 @@ using ServiceLayer.Services.Abstractions;
 
 namespace MedicalAppointmentApp.Controllers
 {
-	public class DefaultController : Controller
-	{
-		private readonly IDoctorService _doctorService;
+    public class DefaultController : Controller
+    {
 
-		public DefaultController(IDoctorService doctorService) {
-			_doctorService = doctorService;
-		}
-		public async Task<IActionResult> Index()
-		{
-			var values = await _doctorService.TGetAllAsync();
-			return View(values);
-		}
-	}
+        public async Task<IActionResult> Index()
+        {
+
+            return View();
+        }
+    }
 }

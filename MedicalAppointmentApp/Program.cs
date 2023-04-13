@@ -37,8 +37,26 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
+app.MapControllerRoute( //DefaultMapCont.
     name: "default",
     pattern: "{controller=Default}/{action=Index}/{id?}");
+
+
+
+//app.UseEndpoints(endpoints => //AreasForPatient
+//{
+//    endpoints.MapControllerRoute(
+//      name: "areas",
+//      pattern: "{area:exists}/{controller=Patient}/{action=Index}/{id?}"
+//    );
+//});
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
 
 app.Run();
