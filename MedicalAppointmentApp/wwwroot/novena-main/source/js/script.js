@@ -1,6 +1,6 @@
 (function ($) {
 	'use strict';
-
+ 
 	// navbarDropdown
 	if ($(window).width() < 992) {
 		$('.navigation .dropdown-toggle').on('click', function () {

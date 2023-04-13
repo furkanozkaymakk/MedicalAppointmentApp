@@ -1,12 +1,25 @@
+using DataAccessLayer.Context;
+using DataAccessLayer.Extensions;
+using EntityLayer.Entities;
+using ServiceLayer.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 // Razor sayfa yenileme için
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+builder.Services.AddSession();
+builder.Services.LoadDataAccessLayerExtension(builder.Configuration); //AddScope
+builder.Services.LoadServiceLayerExtension(builder.Configuration); //AddScope
+
+builder.Services.AddDbContext<AddDbContext>();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -15,7 +28,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
+app.UseSession();
+app.UseAuthentication();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -25,6 +39,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Default}/{action=Index}/{id?}");
 
 app.Run();
