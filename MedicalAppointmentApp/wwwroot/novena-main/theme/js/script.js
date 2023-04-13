@@ -212,6 +212,7 @@
 				myShuffle.filter(input.value);
 			}
 		});
-	}
+  }
+
 
 })(jQuery);

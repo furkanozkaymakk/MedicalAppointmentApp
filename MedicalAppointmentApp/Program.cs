@@ -1,5 +1,6 @@
 using DataAccessLayer.Context;
 using DataAccessLayer.Extensions;
+using EntityLayer.Entities;
 using ServiceLayer.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,7 @@ builder.Services.LoadServiceLayerExtension(builder.Configuration); //AddScope
 builder.Services.AddDbContext<AddDbContext>();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -28,14 +28,14 @@ namespace ServiceLayer.Services.Concretes
             throw new NotImplementedException();
         }
 
-        public Task TDeleteAsync(Doctor entity)
+        public async Task TDeleteAsync(Doctor entity)
         {
-            throw new NotImplementedException();
+            await unitOfWork.GetRepository<Doctor>().DeleteAsync(entity);
         }
 
         public Task<List<Doctor>> TGetAllAsync()
         {
-            throw new NotImplementedException();
+           return unitOfWork.GetRepository<Doctor>().GetAllAsync();
         }
 
         public Task<Doctor> TGetAsync()

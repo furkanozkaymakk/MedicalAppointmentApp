@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Context;
+﻿using CoreLayer.Entities;
+using DataAccessLayer.Context;
 using DataAccessLayer.Repositories.Abstractions;
 using DataAccessLayer.Repositories.Concretes;
 
@@ -26,7 +27,7 @@ namespace DataAccessLayer.UnitOfWorks
             return await dbContext.SaveChangesAsync();
         }
 
-        public IRepository<T> GetRepository<T>() where T : class
+        public IRepository<T> GetRepository<T>() where T : class,IEntityBase,new()
         {
             return new Repository<T>(dbContext); //Repositroy'e gidip işlemleri buradaki <T>'ye göre gerçekleştirmesini isteyeceğiz. Artık tam anlamıyla repomuz unitOf' a bağlanmış oldu.
         }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace EntityLayer.Entities
 {
@@ -11,8 +6,11 @@ namespace EntityLayer.Entities
 	{
 		[Key]
 		public int Id { get; set; }
-		public string userImage { get; set; }
-		public string title { get; set; }
-		public string comment { get; set; }
+		public string Title { get; set; }
+		public string Comment { get; set; }
+
+		//F.K
+		public int AppUserId { get; set; }
+		public AppUser AppUser { get; set; }
 	}
 }

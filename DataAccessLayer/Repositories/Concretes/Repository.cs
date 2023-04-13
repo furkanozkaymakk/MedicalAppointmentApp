@@ -1,11 +1,12 @@
-﻿using DataAccessLayer.Context;
+﻿using CoreLayer.Entities;
+using DataAccessLayer.Context;
 using DataAccessLayer.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace DataAccessLayer.Repositories.Concretes
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class,IEntityBase,new()
     {
         private readonly AddDbContext dbContext;
 

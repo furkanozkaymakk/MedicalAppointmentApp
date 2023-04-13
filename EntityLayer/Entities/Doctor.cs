@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CoreLayer.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace EntityLayer.Entities
 {
-    public class Doctor
-    {
-        [Key]
-        public int  Id { get; set; }
-        public string name { get; set; }
-        public string imageUrl { get; set; }
-        public string section { get; set; }
-        public string ozet { get; set; }
-        public string educations { get; set; }
-        public string facebookUrl { get; set; }
-        public string twitterUrl { get; set;}
-        public string linkedinUrl { get; set;}
-    }
+	public class Doctor : EntityBase, IEntityBase
+	{
+		public List<AppUser> AppUsers { get; set; }
+		public List<Nurse> Nurses { get; set; }
+	}
+
 }
