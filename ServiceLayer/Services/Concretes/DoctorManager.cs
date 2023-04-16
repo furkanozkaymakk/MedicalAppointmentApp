@@ -33,9 +33,9 @@ namespace ServiceLayer.Services.Concretes
             await unitOfWork.GetRepository<Doctor>().DeleteAsync(entity);
         }
 
-        public Task<List<Doctor>> TGetAllAsync()
+        public async Task<List<Doctor>> TGetAllAsync()
         {
-           return unitOfWork.GetRepository<Doctor>().GetAllAsync();
+            return await unitOfWork.GetRepository<Doctor>().GetAllAsync();
         }
 
         public Task<Doctor> TGetAsync()
