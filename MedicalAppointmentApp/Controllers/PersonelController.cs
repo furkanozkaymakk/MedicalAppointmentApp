@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ServiceLayer.Services.Abstractions;
 
 namespace MedicalAppointmentApp.Controllers
 {
     public class PersonelController : Controller
     {
-        public IActionResult Index()
+        private readonly IDoctorService doctorService;
+
+        public PersonelController(IDoctorService doctorService)
         {
-            return View();
+            this.doctorService = doctorService;
         }
+        public async Task<IActionResult> Index()
+        {
+            var doctors = doctorService.TGetAllAsync();
+            return View(doctors);
+        }
+        //TODO: Hepsini tek sayfada nasıl gösterecez razorda? 
     }
 }
