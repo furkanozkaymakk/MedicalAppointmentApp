@@ -1,0 +1,28 @@
+﻿<div class="footer">
+    <div class="float-right" id="date">
+    </div>
+    <div>
+        <strong>Kullanım Hakları Saklıdır  ©2023</strong> Geliştirme : Furkan ÖZKAYMAK ||
+        ALPASLAN MERT DURAK
+    </div>
+</div>
+<script type="text/javascript">
+    window.onload = setInterval(clock, 1000);
+
+    function clock() {
+        var d = new Date();
+        var date = d.getDate();
+        var month = d.getMonth();
+        var montharr = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+        month = montharr[month];
+        var year = d.getFullYear();
+        var date = d.getDate();
+        var day = d.getDay();
+        var dayarr = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+        day = dayarr[day];
+        var hour = d.getHours();
+        var min = d.getMinutes();
+        var sec = d.getSeconds();
+        document.getElementById("date").innerHTML = day + " " + date + " " + month + " " + year + " | " + hour + ":" + min + ":" + sec;
+    }
+</script>

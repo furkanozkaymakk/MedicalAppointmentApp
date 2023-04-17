@@ -1,41 +1,71 @@
 ﻿
 <section class="features">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="feature-block d-lg-flex">
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-							<i class="icofont-surgeon-alt"></i>
-						</div>
-						<span>7/24 Hizmet</span>
-						<h4 class="mb-3">Online Randevu</h4>
-						<p class="mb-4">Acil durumlarda HER ZAMAN destek alın. Aile hekimliği ilkesini getirdik.</p>
-						<a href="appoinment.html" class="btn btn-main btn-round-full">Randevu Al</a>
-					</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="feature-block d-lg-flex">
+                    <div class="feature-item mb-5 mb-lg-0">
+                        <div class="feature-icon mb-4">
+                            <i class="icofont-surgeon-alt"></i>
+                        </div>
+                        <span>7/24 Hizmet</span>
+                        <h4 class="mb-3">Online Randevu</h4>
+                        <p class="mb-4">Acil durumlarda HER ZAMAN destek alın. Aile hekimliği ilkesini getirdik.</p>
+                        @* Pop Up Menü
 
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-							<i class="icofont-ui-clock"></i>
-						</div>
-						<span>Çalışma Programımız</span>
-						<h4 class="mb-3">Çalışma Saatlerimiz</h4>
-						<ul class="w-hours list-unstyled">
-							<li class="d-flex justify-content-between">Hafta İçi : <span>8:00 - 17:00</span></li>
-							<li class="d-flex justify-content-between">Hafta Sonu : <span>10:00 - 17:00</span></li>
-						</ul>
-					</div>
 
-					<div class="feature-item mb-5 mb-lg-0">
-						<div class="feature-icon mb-4">
-							<i class="icofont-support"></i>
-						</div>
-						<span>Acil Durumlar</span>
-						<h4 class="mb-3">112</h4>
-						<p>Herhangi bir Acil Durumda sakin kalın ve hızlıca destek alın. </p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
+                        *@
+                        <button class="btn btn-main btn-round-full" data-toggle="modal" data-target="#myModal">Randevu Al</button>
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content clearfix">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                    <div class="modal-body">
+                                        <h3 class="title">Login Form</h3>
+                                        <p class="description">Login here Using Email & Password</p>
+                                        <div class="form-group">
+                                            <span class="input-icon"><i class="fa fa-user"></i></span>
+                                            <input type="email" class="form-control" placeholder="Enter email">
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon"><i class="fas fa-key"></i></span>
+                                            <input type="password" class="form-control" placeholder="Password">
+                                        </div>
+                                        <div class="form-group checkbox">
+                                            <input type="checkbox">
+                                            <label>Remamber me</label>
+                                        </div>
+                                        <a href="" class="forgot-pass">Forgot Password?</a>
+                                        <button class="btn">Login</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-item mb-5 mb-lg-0">
+                        <div class="feature-icon mb-4">
+                            <i class="icofont-ui-clock"></i>
+                        </div>
+                        <span>Çalışma Programımız</span>
+                        <h4 class="mb-3">Çalışma Saatlerimiz</h4>
+                        <ul class="w-hours list-unstyled">
+                            <li class="d-flex justify-content-between">Hafta İçi : <span>8:00 - 17:00</span></li>
+                            <li class="d-flex justify-content-between">Hafta Sonu : <span>10:00 - 17:00</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-item mb-5 mb-lg-0">
+                        <div class="feature-icon mb-4">
+                            <i class="icofont-support"></i>
+                        </div>
+                        <span>Acil Durumlar</span>
+                        <h4 class="mb-3">112</h4>
+                        <p>Herhangi bir Acil Durumda sakin kalın ve hızlıca destek alın. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

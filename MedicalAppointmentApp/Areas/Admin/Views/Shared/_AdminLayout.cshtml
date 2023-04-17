@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+
+@await Html.PartialAsync("/Areas/Admin/Views/AdminLayoutPartial/_HeaderPartial.cshtml")
+<body>
+    <div id="wrapper">
+
+        @await Html.PartialAsync("/Areas/Admin/Views/AdminLayoutPartial/_NavBarPartial.cshtml")
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            @await Html.PartialAsync("/Areas/Admin/Views/AdminLayoutPartial/_BottomAreaPartial.cshtml")
+
+            @RenderBody()
+
+
+            @await Html.PartialAsync("/Areas/Admin/Views/AdminLayoutPartial/_FooterPartial.cshtml")
+        </div>
+
+    </div>
+
+    @await Html.PartialAsync("/Areas/Admin/Views/AdminLayoutPartial/_ScriptPartial.cshtml")
+</body>
+</html>
